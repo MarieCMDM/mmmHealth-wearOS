@@ -1,6 +1,9 @@
 package com.example.mmmmhealth_wear;
 
 import android.app.Activity;
+import android.content.Context;
+import android.hardware.Sensor;
+import android.hardware.SensorManager;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -17,6 +20,10 @@ public class MainActivity extends Activity {
     private ActivityMainBinding binding;
 
     Button btnReport;
+    //SensorManager manager;
+    //Sensor bpm;
+    //Sensor pressure;
+    //Sensor spo2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +47,10 @@ public class MainActivity extends Activity {
             Toast.makeText(getApplicationContext(), "Error", Toast.LENGTH_SHORT).show();
         }
 
+        //manager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
+        //bpm     = manager.getDefaultSensor(Sensor.TYPE_HEART_RATE);
+        //pressure = manager.getDefaultSensor(Sensor.TYPE_PRESSURE);
+        //spo2 = manager.getDefaultSensor(Sensor.);
 
         btnReport.setOnClickListener(new View.OnClickListener() {
             @Override

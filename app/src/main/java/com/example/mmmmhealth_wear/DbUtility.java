@@ -68,9 +68,10 @@ public class DbUtility {
      * @param id String REQUIRE not null
      */
     public static void submitData1(String id, int feelings, int weight, String notes,  int SYS, int DIA, int BPM, int SpO2) throws SQLException {
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-        Calendar c = Calendar.getInstance();
-        String date = sdf.format(c.getTime());
+        //SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+        //Calendar c = Calendar.getInstance();
+        //String date = sdf.format(c.getTime());
+    String date = "2023-02-03";
 
         String query =  "insert into report (feelings, weight, notes, sys, dia, bpm, spo2, date, patient_id) values ("+feelings+", "+weight+", "+notes+", "+SYS+", "+DIA+", "+BPM+", "+SpO2+", '"+date+"', "+id+")";
         Log.e("query", query);
